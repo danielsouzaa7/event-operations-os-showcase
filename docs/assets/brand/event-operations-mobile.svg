@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 510" width="400" height="510" role="img" aria-labelledby="t d">
+  <title id="t">Event Operations OS — Confirmou ≠ Declarou ≠ Recebido</title>
+  <desc id="d">Três fatos acendem em sequência: o convidado confirmou presença, declarou que fez o Pix, e a casa viu o dinheiro na conta. Depois as ligações se desfazem e aparece o sinal de diferente: nenhum vira o outro sem verificação.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .brand { font-size: 20px; font-weight: 650; fill: #EDEDF5; }
+    .meta  { font-size: 14px; fill: #8A8AA3; }
+    .t     { font-size: 25px; font-weight: 700; fill: #EDEDF5; letter-spacing: -.3px; }
+    .s     { font-size: 17px; fill: #A0A0B8; }
+    .neq   { font-size: 32px; font-weight: 700; fill: #EDEDF5; }
+    .cap   { font-size: 17px; fill: #B4B4CA; }
+
+    .anim { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.45,0,.25,1); }
+    .k1 { animation-name: k1; } .k2 { animation-name: k2; } .k3 { animation-name: k3; }
+    .l1 { animation-name: l1; } .l2 { animation-name: l2; }
+    .up { animation-name: up; } .down { animation-name: down; }
+    .ne { animation-name: ne; } .cp { animation-name: cp; }
+
+    @keyframes k1 { 0%, 3.9%  { opacity: .22; } 6%, 93%  { opacity: 1; } 100% { opacity: .22; } }
+    @keyframes k2 { 0%, 17.9% { opacity: .22; } 20%, 93% { opacity: 1; } 100% { opacity: .22; } }
+    @keyframes k3 { 0%, 31.9% { opacity: .22; } 34%, 93% { opacity: 1; } 100% { opacity: .22; } }
+    @keyframes l1 { 0%, 9.9%  { opacity: 1; stroke-dashoffset: 42; } 16%, 42% { opacity: 1; stroke-dashoffset: 0; } 48%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+    @keyframes l2 { 0%, 23.9% { opacity: 1; stroke-dashoffset: 42; } 30%, 42% { opacity: 1; stroke-dashoffset: 0; } 48%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+    @keyframes up   { 0%, 43.9% { transform: translateY(0); } 50%, 93% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+    @keyframes down { 0%, 43.9% { transform: translateY(0); } 50%, 93% { transform: translateY(6px); } 100% { transform: translateY(0); } }
+    @keyframes ne { 0%, 47.9% { opacity: 0; } 52%, 93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes cp { 0%, 55.9% { opacity: 0; } 60%, 93% { opacity: 1; } 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } }
+  </style>
+
+  <rect x="0.5" y="0.5" width="399" height="509" rx="16" fill="#0C0C14" stroke="#23233A"/>
+  <text class="f brand" x="24" y="44">Event Operations OS</text>
+  <text class="f meta" x="376" y="44" text-anchor="end">Commercial V1</text>
+
+  <line class="anim l1" x1="200" y1="164" x2="200" y2="206" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="42" opacity="0"/>
+  <line class="anim l2" x1="200" y1="298" x2="200" y2="340" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="42" opacity="0"/>
+
+  <g class="anim up">
+    <g class="anim k1">
+      <rect x="24" y="72" width="352" height="92" rx="14" fill="#15151F" stroke="#8B6CFF" stroke-width="1.5"/>
+      <circle cx="50" cy="118" r="6" fill="#8B6CFF"/>
+      <text class="f t" x="72" y="112">Confirmou</text>
+      <text class="f s" x="72" y="140">vai ao evento</text>
+    </g>
+  </g>
+
+  <g class="anim k2">
+    <rect x="24" y="206" width="352" height="92" rx="14" fill="#15151F" stroke="#E3B341" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <circle cx="50" cy="252" r="6" fill="none" stroke="#E3B341" stroke-width="2"/>
+    <text class="f t" x="72" y="246">Declarou</text>
+    <text class="f s" x="72" y="274">diz que fez o Pix</text>
+  </g>
+
+  <g class="anim down">
+    <g class="anim k3">
+      <rect x="24" y="340" width="352" height="92" rx="14" fill="#15151F" stroke="#3FB950" stroke-width="1.5"/>
+      <circle cx="50" cy="386" r="6" fill="#3FB950"/>
+      <text class="f t" x="72" y="380">Recebido</text>
+      <text class="f s" x="72" y="408">dinheiro na conta</text>
+    </g>
+  </g>
+
+  <g class="f" text-anchor="middle">
+    <text class="anim ne neq" x="200" y="196">≠</text>
+    <text class="anim ne neq" x="200" y="330">≠</text>
+  </g>
+
+  <g class="anim cp f">
+    <text class="cap" x="24" y="468">Três fatos. Nenhum vira o outro</text>
+    <text class="cap" x="24" y="491">sem verificação.</text>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-<img src="docs/assets/brand/event-operations.svg" width="100%" alt="Três fatos acendem em sequência — confirmou, declarou e recebido — e depois se separam: são fatos distintos, e nenhum vira o outro sem verificação.">
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/event-operations-os-showcase/raw/master/docs/assets/brand/event-operations-mobile.svg"><img src="docs/assets/brand/event-operations.svg" width="100%" alt="Três fatos acendem em sequência — confirmou, declarou e recebido — e depois se separam: são fatos distintos, e nenhum vira o outro sem verificação."></picture>
 
 # Event Operations OS
 
