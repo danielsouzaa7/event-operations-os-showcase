@@ -71,38 +71,27 @@ Planilhas reduzem os três a uma única coluna "pago". Aqui são três fatos, co
 
 Todas as telas vêm do **laboratório local descartável**, com **dados fictícios** — casa, nomes e chave Pix inventados (em domínio reservado `.example`).
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="docs/assets/portfolio/01-event-list.png" alt="Lista de eventos abertos, encerrados e fechados, cada um com seu estado no ciclo de vida e suas ações"/>
-      <br/><b>Eventos</b> — um painel por evento. O estado do ciclo de vida decide o que cada evento ainda aceita.
-    </td>
-    <td width="50%" valign="top">
-      <img src="docs/assets/portfolio/02-event-dashboard.png" alt="Painel operacional com o check-in em relação aos esperados, dinheiro por estado, ocupação das mesas e inconsistências que exigem decisão"/>
-      <br/><b>Painel operacional</b> — chegadas em relação aos esperados, dinheiro por estado, ocupação das mesas e o que exige decisão.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="docs/assets/portfolio/03-payments.png" alt="Tela de pagamentos separando valores validados, declarados e em aberto, com inconsistências de pagamento a maior e de Pix duplicado"/>
-      <br/><b>Pagamentos e inconsistências</b> — validado, declarado e em aberto nunca se misturam. Pagamento a maior e Pix duplicado de verdade aparecem listados, não absorvidos.
-    </td>
-    <td width="50%" valign="top">
-      <img src="docs/assets/portfolio/04-closing.png" alt="Tela de fechamento com a última versão gravada v1, uma pendência divergente e o detalhamento de dinheiro e pessoas que a versão 2 vai gravar"/>
-      <br/><b>Fechamento versionado</b> — última versão gravada <code>v1</code>, uma pendência divergente e o que a <code>v2</code> vai registrar.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <img src="docs/assets/portfolio/05-mobile-door-mode.png" width="300" alt="Modo porta no celular listando os convidados esperados com mesa, grupo e situação do pagamento, e um botão de chegada"/>
-      <br/><b>Modo porta no celular</b> — esperados com mesa, grupo e situação do pagamento; um toque por chegada.
-    </td>
-    <td width="50%" valign="top" align="center">
-      <img src="docs/assets/portfolio/06-mobile-receipt.png" width="300" alt="Registro de recebimento no celular: R$ 90 de uma cobrança de R$ 180, com os modos recebimento, segundo Pix real e correção"/>
-      <br/><b>Registro de recebimento</b> — R$ 90 de uma cobrança de R$ 180 continua parcial. <i>Segundo Pix real</i> e <i>correção</i> são modos separados, sempre com motivo.
-    </td>
-  </tr>
-</table>
+O **painel operacional** aparece no topo desta página. As demais telas:
+
+<img src="docs/assets/portfolio/01-event-list.png" width="100%" alt="Lista de eventos abertos, encerrados e fechados, cada um com seu estado no ciclo de vida e suas ações">
+
+**Eventos** — um painel por evento. O estado do ciclo de vida decide o que cada evento ainda aceita.
+
+<img src="docs/assets/portfolio/03-payments.png" width="100%" alt="Tela de pagamentos separando valores validados, declarados e em aberto, com inconsistências de pagamento a maior e de Pix duplicado">
+
+**Pagamentos e inconsistências** — validado, declarado e em aberto nunca se misturam. Pagamento a maior e Pix duplicado de verdade aparecem listados, não absorvidos.
+
+<img src="docs/assets/portfolio/04-closing.png" width="100%" alt="Tela de fechamento com a última versão gravada v1, uma pendência divergente e o detalhamento de dinheiro e pessoas que a versão 2 vai gravar">
+
+**Fechamento versionado** — última versão gravada `v1`, uma pendência divergente e o que a `v2` vai registrar.
+
+<p align="center"><img src="docs/assets/portfolio/05-mobile-door-mode.png" width="320" alt="Modo porta no celular listando os convidados esperados com mesa, grupo e situação do pagamento, e um botão de chegada"></p>
+
+**Modo porta no celular** — esperados com mesa, grupo e situação do pagamento; um toque por chegada.
+
+<p align="center"><img src="docs/assets/portfolio/06-mobile-receipt.png" width="320" alt="Registro de recebimento no celular: R$ 90 de uma cobrança de R$ 180, com os modos recebimento, segundo Pix real e correção"></p>
+
+**Registro de recebimento** — R$ 90 de uma cobrança de R$ 180 continua parcial. *Segundo Pix real* e *correção* são modos separados, sempre com motivo.
 
 ## Arquitetura
 
