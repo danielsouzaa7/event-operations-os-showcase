@@ -1,22 +1,12 @@
-<div align="center">
+<img src="docs/assets/brand/event-operations.svg" width="100%" alt="Três fatos acendem em sequência — confirmou, declarou e recebido — e depois se separam: são fatos distintos, e nenhum vira o outro sem verificação.">
 
 # Event Operations OS
 
-**Sistema operacional para casas de eventos pagos** — convidados, RSVP, Pix, check-in, mesas<br/>
-e fechamento financeiro versionado.
+**Sistema operacional para casas de eventos pagos** — convidados, RSVP, Pix, check-in, mesas e fechamento financeiro versionado.
 
-![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React 19](https://img.shields.io/badge/React-19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PostgreSQL 17](https://img.shields.io/badge/PostgreSQL-17-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Testes unitários: 1137 aprovados](https://img.shields.io/badge/testes%20unit%C3%A1rios-1137%20aprovados-2EA44F?style=flat-square)
-![Commercial V1](https://img.shields.io/badge/vers%C3%A3o-Commercial%20V1-7C5CFF?style=flat-square)
+**Commercial V1** — implementação concluída e validada localmente · **ainda não implantado em produção** · código-fonte privado
 
-**Commercial V1 — implementação concluída e validada localmente** · **Ainda não implantado em produção**
-
-</div>
-
-<br/>
+Next.js 16 · React 19 · TypeScript · PostgreSQL 17 · 1.137 testes unitários
 
 ![Painel de um evento em andamento: 11 de 24 convidados esperados já chegaram, R$ 2.910 validados de R$ 3.960 previstos, ocupação das mesas e inconsistências de pagamento que exigem decisão](docs/assets/portfolio/02-event-dashboard.png)
 

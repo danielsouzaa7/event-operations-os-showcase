@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Event Operations OS — Confirmou ≠ Declarou ≠ Recebido</title>
+  <desc id="d">Três fatos acendem em sequência: o convidado confirmou presença, declarou que fez o Pix, e a casa viu o dinheiro na conta. Depois as ligações entre eles se desfazem e aparece o sinal de diferente: são três fatos distintos, e nenhum vira o outro sem verificação.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .brand { font-size: 21px; font-weight: 650; fill: #EDEDF5; letter-spacing: -.2px; }
+    .meta  { font-size: 16px; fill: #8A8AA3; }
+    .t     { font-size: 27px; font-weight: 700; fill: #EDEDF5; letter-spacing: -.4px; }
+    .s     { font-size: 18px; fill: #A0A0B8; }
+    .neq   { font-size: 38px; font-weight: 700; fill: #EDEDF5; }
+    .cap   { font-size: 19px; fill: #B4B4CA; }
+
+    .anim { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.45,0,.25,1); }
+    .k1 { animation-name: k1; } .k2 { animation-name: k2; } .k3 { animation-name: k3; }
+    .l1 { animation-name: l1; } .l2 { animation-name: l2; }
+    .left  { animation-name: left; }  .right { animation-name: right; }
+    .ne  { animation-name: ne; }
+    .cp  { animation-name: cp; }
+
+    /* os três fatos acendem na ordem em que acontecem */
+    @keyframes k1 { 0%, 3.9%  { opacity: .22; } 6%, 93%  { opacity: 1; } 100% { opacity: .22; } }
+    @keyframes k2 { 0%, 17.9% { opacity: .22; } 20%, 93% { opacity: 1; } 100% { opacity: .22; } }
+    @keyframes k3 { 0%, 31.9% { opacity: .22; } 34%, 93% { opacity: 1; } 100% { opacity: .22; } }
+    /* ...ligados, como uma planilha os trataria */
+    @keyframes l1 { 0%, 9.9%  { opacity: 1; stroke-dashoffset: 44; } 16%, 42% { opacity: 1; stroke-dashoffset: 0; } 48%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+    @keyframes l2 { 0%, 23.9% { opacity: 1; stroke-dashoffset: 44; } 30%, 42% { opacity: 1; stroke-dashoffset: 0; } 48%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+    /* ...até se separarem: três fatos distintos */
+    @keyframes left  { 0%, 43.9% { transform: translateX(0); } 50%, 93% { transform: translateX(-10px); } 100% { transform: translateX(0); } }
+    @keyframes right { 0%, 43.9% { transform: translateX(0); } 50%, 93% { transform: translateX(10px); } 100% { transform: translateX(0); } }
+    @keyframes ne { 0%, 47.9% { opacity: 0; } 52%, 93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes cp { 0%, 55.9% { opacity: 0; } 60%, 93% { opacity: 1; } 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim { animation: none !important; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="759" height="299" rx="18" fill="#0C0C14" stroke="#23233A"/>
+
+  <text class="f brand" x="36" y="50">Event Operations OS</text>
+  <text class="f meta" x="724" y="50" text-anchor="end">Commercial V1</text>
+
+  <!-- ligações: começam presentes e se desfazem (estado final = sem ligação) -->
+  <line class="anim l1" x1="236" y1="148" x2="280" y2="148" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="44" opacity="0"/>
+  <line class="anim l2" x1="480" y1="148" x2="524" y2="148" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="44" opacity="0"/>
+
+  <!-- confirmou: o convidado disse que vai -->
+  <g class="anim left">
+    <g class="anim k1">
+      <rect x="36" y="86" width="200" height="124" rx="14" fill="#15151F" stroke="#8B6CFF" stroke-width="1.5"/>
+      <circle cx="60" cy="118" r="6" fill="#8B6CFF"/>
+      <text class="f t" x="58" y="162">Confirmou</text>
+      <text class="f s" x="58" y="192">vai ao evento</text>
+    </g>
+  </g>
+
+  <!-- declarou: o convidado diz que pagou — não é dinheiro -->
+  <g class="anim k2">
+    <rect x="280" y="86" width="200" height="124" rx="14" fill="#15151F" stroke="#E3B341" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <circle cx="304" cy="118" r="6" fill="none" stroke="#E3B341" stroke-width="2"/>
+    <text class="f t" x="302" y="162">Declarou</text>
+    <text class="f s" x="302" y="192">diz que fez o Pix</text>
+  </g>
+
+  <!-- recebido: a casa viu o dinheiro entrar -->
+  <g class="anim right">
+    <g class="anim k3">
+      <rect x="524" y="86" width="200" height="124" rx="14" fill="#15151F" stroke="#3FB950" stroke-width="1.5"/>
+      <circle cx="548" cy="118" r="6" fill="#3FB950"/>
+      <text class="f t" x="546" y="162">Recebido</text>
+      <text class="f s" x="546" y="192">dinheiro na conta</text>
+    </g>
+  </g>
+
+  <g class="f" text-anchor="middle">
+    <text class="anim ne neq" x="258" y="161">≠</text>
+    <text class="anim ne neq" x="502" y="161">≠</text>
+  </g>
+
+  <text class="anim cp f cap" x="36" y="258">Três fatos. Nenhum vira o outro sem verificação.</text>
+</svg>
