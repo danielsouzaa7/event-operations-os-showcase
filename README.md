@@ -1,4 +1,4 @@
-<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/event-operations-os-showcase/raw/master/docs/assets/brand/event-operations-mobile.svg"><img src="docs/assets/brand/event-operations.svg" width="100%" alt="Três fatos acendem em sequência — confirmou, declarou e recebido — e depois se separam: são fatos distintos, e nenhum vira o outro sem verificação."></picture>
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/event-operations-os-showcase/raw/master/docs/assets/brand/event-operations-mobile.svg"><img src="docs/assets/brand/event-operations.svg" width="100%" alt="Confirmou, declarou e recebido aparecem ligados e depois se separam; em seguida o fechamento v1 é gravado, chega um Pix atrasado e nasce o v2, com a v1 intacta."></picture>
 
 # Event Operations OS
 

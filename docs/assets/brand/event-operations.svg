@@ -1,81 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-labelledby="t d">
-  <title id="t">Event Operations OS — Confirmou ≠ Declarou ≠ Recebido</title>
-  <desc id="d">Três fatos acendem em sequência: o convidado confirmou presença, declarou que fez o Pix, e a casa viu o dinheiro na conta. Depois as ligações entre eles se desfazem e aparece o sinal de diferente: são três fatos distintos, e nenhum vira o outro sem verificação.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 460" width="840" height="460" role="img" aria-labelledby="t d">
+  <title id="t">Event Operations OS — três fatos, e um fechamento que ganha versões</title>
+  <desc id="d">Primeiro: confirmou, declarou e recebido aparecem ligados, as ligações se rompem e sobra confirmou diferente de declarou diferente de recebido. Depois: evento, RSVP, cobrança, porta e fechamento v1; quando chega um Pix atrasado, nasce o fechamento v2 e a v1 continua intacta.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .brand { font-size: 21px; font-weight: 650; fill: #EDEDF5; letter-spacing: -.2px; }
-    .meta  { font-size: 16px; fill: #8A8AA3; }
+    .brand { font-size: 21px; font-weight: 650; fill: #EDEDF5; }
+    .meta  { font-size: 15px; fill: #8A8AA3; }
     .t     { font-size: 27px; font-weight: 700; fill: #EDEDF5; letter-spacing: -.4px; }
-    .s     { font-size: 18px; fill: #A0A0B8; }
-    .neq   { font-size: 38px; font-weight: 700; fill: #EDEDF5; }
-    .cap   { font-size: 19px; fill: #B4B4CA; }
+    .s     { font-size: 17px; fill: #A0A0B8; }
+    .neq   { font-size: 36px; font-weight: 700; fill: #EDEDF5; }
+    .cap   { font-size: 18px; fill: #B4B4CA; }
+    .lbl   { font-size: 15px; font-weight: 600; fill: #A0A0B8; }
+    .late  { font-size: 15px; font-weight: 600; fill: #E3B341; }
 
-    .anim { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.45,0,.25,1); }
+    /* 16s: duas fases — primeiro os três fatos, depois o ciclo do dinheiro. */
+    .anim { animation-duration: 16s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.45,0,.25,1); }
+    .lin { animation-timing-function: linear; }
     .k1 { animation-name: k1; } .k2 { animation-name: k2; } .k3 { animation-name: k3; }
     .l1 { animation-name: l1; } .l2 { animation-name: l2; }
-    .left  { animation-name: left; }  .right { animation-name: right; }
-    .ne  { animation-name: ne; }
-    .cp  { animation-name: cp; }
+    .lf { animation-name: lf; } .rt { animation-name: rt; }
+    .ne { animation-name: ne; } .cp { animation-name: cp; }
+    .ph2 { animation-name: ph2; } .run { animation-name: run; }
+    .v1 { animation-name: v1; } .pix { animation-name: pix; } .v2 { animation-name: v2; } .note { animation-name: note; }
+    .e1 { animation-name: e1; } .e2 { animation-name: e2; } .e3 { animation-name: e3; } .e4 { animation-name: e4; }
 
-    /* os três fatos acendem na ordem em que acontecem */
-    @keyframes k1 { 0%, 3.9%  { opacity: .22; } 6%, 93%  { opacity: 1; } 100% { opacity: .22; } }
-    @keyframes k2 { 0%, 17.9% { opacity: .22; } 20%, 93% { opacity: 1; } 100% { opacity: .22; } }
-    @keyframes k3 { 0%, 31.9% { opacity: .22; } 34%, 93% { opacity: 1; } 100% { opacity: .22; } }
-    /* ...ligados, como uma planilha os trataria */
-    @keyframes l1 { 0%, 9.9%  { opacity: 1; stroke-dashoffset: 44; } 16%, 42% { opacity: 1; stroke-dashoffset: 0; } 48%, 100% { opacity: 0; stroke-dashoffset: 0; } }
-    @keyframes l2 { 0%, 23.9% { opacity: 1; stroke-dashoffset: 44; } 30%, 42% { opacity: 1; stroke-dashoffset: 0; } 48%, 100% { opacity: 0; stroke-dashoffset: 0; } }
-    /* ...até se separarem: três fatos distintos */
-    @keyframes left  { 0%, 43.9% { transform: translateX(0); } 50%, 93% { transform: translateX(-10px); } 100% { transform: translateX(0); } }
-    @keyframes right { 0%, 43.9% { transform: translateX(0); } 50%, 93% { transform: translateX(10px); } 100% { transform: translateX(0); } }
-    @keyframes ne { 0%, 47.9% { opacity: 0; } 52%, 93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes cp { 0%, 55.9% { opacity: 0; } 60%, 93% { opacity: 1; } 100% { opacity: 0; } }
+    /* fase 1 */
+    @keyframes k1 { 0%, 2%  { opacity: .2; } 5%, 44%  { opacity: 1; } 50%, 100% { opacity: .18; } }
+    @keyframes k2 { 0%, 10% { opacity: .2; } 13%, 44% { opacity: 1; } 50%, 100% { opacity: .18; } }
+    @keyframes k3 { 0%, 18% { opacity: .2; } 21%, 44% { opacity: 1; } 50%, 100% { opacity: .18; } }
+    @keyframes l1 { 0%, 6%  { opacity: 1; stroke-dashoffset: 35; } 10%, 26% { opacity: 1; stroke-dashoffset: 0; } 30%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+    @keyframes l2 { 0%, 14% { opacity: 1; stroke-dashoffset: 35; } 18%, 26% { opacity: 1; stroke-dashoffset: 0; } 30%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+    @keyframes lf { 0%, 26% { transform: translateX(0); } 31%, 44% { transform: translateX(-10px); } 50%, 100% { transform: translateX(0); } }
+    @keyframes rt { 0%, 26% { transform: translateX(0); } 31%, 44% { transform: translateX(10px); } 50%, 100% { transform: translateX(0); } }
+    @keyframes ne { 0%, 28% { opacity: 0; } 32%, 44% { opacity: 1; } 48%, 100% { opacity: 0; } }
+    @keyframes cp { 0%, 33% { opacity: 0; } 36%, 44% { opacity: 1; } 48%, 100% { opacity: 0; } }
 
-    @media (prefers-reduced-motion: reduce) {
-      .anim { animation: none !important; }
+    /* fase 2 */
+    @keyframes ph2 { 0%, 48% { opacity: 0; } 53%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes run {
+      0%, 54% { transform: translateX(0); opacity: 0; } 56% { opacity: 1; }
+      60% { transform: translateX(120px); } 64% { transform: translateX(240px); }
+      68% { transform: translateX(360px); } 72% { transform: translateX(480px); opacity: 1; }
+      74%, 100% { transform: translateX(480px); opacity: 0; }
     }
+    @keyframes e1 { 0%, 55% { opacity: .25; } 57%, 95% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes e2 { 0%, 59% { opacity: .25; } 61%, 95% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes e3 { 0%, 63% { opacity: .25; } 65%, 95% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes e4 { 0%, 67% { opacity: .25; } 69%, 95% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes v1 { 0%, 71% { opacity: .25; } 73%, 95% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes pix { 0%, 77% { opacity: 0; transform: translateY(6px); } 80%, 95% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes v2 { 0%, 84% { opacity: 0; transform: scale(.7); } 87%, 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; } }
+    @keyframes note { 0%, 87% { opacity: 0; } 90%, 95% { opacity: 1; } 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
   </style>
+  <defs>
+    <filter id="s6f" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter>
+    <g id="vnode"><circle r="11" fill="#3FB950"/></g>
+  </defs>
 
-  <rect x="0.5" y="0.5" width="759" height="299" rx="18" fill="#0C0C14" stroke="#23233A"/>
+  <rect x="0.5" y="0.5" width="839" height="459" rx="20" fill="#0C0C14" stroke="#23233A"/>
+  <text class="f brand" x="40" y="48">Event Operations OS</text>
+  <text class="f meta" x="800" y="48" text-anchor="end">Commercial V1</text>
 
-  <text class="f brand" x="36" y="50">Event Operations OS</text>
-  <text class="f meta" x="724" y="50" text-anchor="end">Commercial V1</text>
+  <!-- fase 1: três fatos que uma planilha trataria como um só -->
+  <line class="anim l1" x1="270" y1="160" x2="305" y2="160" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="35" opacity="0"/>
+  <line class="anim l2" x1="535" y1="160" x2="570" y2="160" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="35" opacity="0"/>
 
-  <!-- ligações: começam presentes e se desfazem (estado final = sem ligação) -->
-  <line class="anim l1" x1="236" y1="148" x2="280" y2="148" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="44" opacity="0"/>
-  <line class="anim l2" x1="480" y1="148" x2="524" y2="148" stroke="#8B6CFF" stroke-width="2.5" stroke-dasharray="44" opacity="0"/>
-
-  <!-- confirmou: o convidado disse que vai -->
-  <g class="anim left">
+  <g class="anim lf">
     <g class="anim k1">
-      <rect x="36" y="86" width="200" height="124" rx="14" fill="#15151F" stroke="#8B6CFF" stroke-width="1.5"/>
-      <circle cx="60" cy="118" r="6" fill="#8B6CFF"/>
-      <text class="f t" x="58" y="162">Confirmou</text>
-      <text class="f s" x="58" y="192">vai ao evento</text>
+      <rect x="40" y="96" width="230" height="128" rx="15" fill="#15151F" stroke="#8B6CFF" stroke-width="1.5"/>
+      <circle cx="66" cy="130" r="6" fill="#8B6CFF"/>
+      <text class="f t" x="64" y="176">Confirmou</text>
+      <text class="f s" x="64" y="204">vai ao evento</text>
     </g>
   </g>
-
-  <!-- declarou: o convidado diz que pagou — não é dinheiro -->
   <g class="anim k2">
-    <rect x="280" y="86" width="200" height="124" rx="14" fill="#15151F" stroke="#E3B341" stroke-width="1.5" stroke-dasharray="6 5"/>
-    <circle cx="304" cy="118" r="6" fill="none" stroke="#E3B341" stroke-width="2"/>
-    <text class="f t" x="302" y="162">Declarou</text>
-    <text class="f s" x="302" y="192">diz que fez o Pix</text>
+    <rect x="305" y="96" width="230" height="128" rx="15" fill="#15151F" stroke="#E3B341" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <circle cx="331" cy="130" r="6" fill="none" stroke="#E3B341" stroke-width="2"/>
+    <text class="f t" x="329" y="176">Declarou</text>
+    <text class="f s" x="329" y="204">diz que fez o Pix</text>
   </g>
-
-  <!-- recebido: a casa viu o dinheiro entrar -->
-  <g class="anim right">
+  <g class="anim rt">
     <g class="anim k3">
-      <rect x="524" y="86" width="200" height="124" rx="14" fill="#15151F" stroke="#3FB950" stroke-width="1.5"/>
-      <circle cx="548" cy="118" r="6" fill="#3FB950"/>
-      <text class="f t" x="546" y="162">Recebido</text>
-      <text class="f s" x="546" y="192">dinheiro na conta</text>
+      <rect x="570" y="96" width="230" height="128" rx="15" fill="#15151F" stroke="#3FB950" stroke-width="1.5"/>
+      <circle cx="596" cy="130" r="6" fill="#3FB950"/>
+      <text class="f t" x="594" y="176">Recebido</text>
+      <text class="f s" x="594" y="204">dinheiro na conta</text>
     </g>
   </g>
 
   <g class="f" text-anchor="middle">
-    <text class="anim ne neq" x="258" y="161">≠</text>
-    <text class="anim ne neq" x="502" y="161">≠</text>
+    <text class="anim ne neq" x="287" y="173">≠</text>
+    <text class="anim ne neq" x="552" y="173">≠</text>
   </g>
+  <text class="anim cp f cap" x="40" y="266">Três fatos. Nenhum vira o outro sem verificação.</text>
 
-  <text class="anim cp f cap" x="36" y="258">Três fatos. Nenhum vira o outro sem verificação.</text>
+  <!-- fase 2: o ciclo do evento, e o dinheiro que chega depois do fechamento -->
+  <g class="anim ph2">
+    <line x1="60" y1="340" x2="540" y2="340" stroke="#23233A" stroke-width="2"/>
+    <path d="M660 392 L740 352" stroke="#E3B341" stroke-opacity=".6" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+
+    <circle class="anim e1" cx="60"  cy="340" r="10" fill="#8B6CFF"/>
+    <circle class="anim e2" cx="180" cy="340" r="10" fill="#8B6CFF"/>
+    <circle class="anim e3" cx="300" cy="340" r="10" fill="#8B6CFF"/>
+    <circle class="anim e4" cx="420" cy="340" r="10" fill="#8B6CFF"/>
+    <circle class="anim v1" cx="540" cy="340" r="11" fill="#3FB950"/>
+    <circle class="anim v2" cx="760" cy="340" r="11" fill="#3FB950"/>
+
+    <g class="f lbl" text-anchor="middle">
+      <text x="60"  y="378">evento</text>
+      <text x="180" y="378">RSVP</text>
+      <text x="300" y="378">cobrança</text>
+      <text x="420" y="378">porta</text>
+      <text class="anim v1" x="540" y="378">fechamento v1</text>
+      <text class="anim v2" x="760" y="378">fechamento v2</text>
+    </g>
+
+    <g class="anim pix">
+      <rect x="586" y="386" width="148" height="34" rx="9" fill="#1A160E" stroke="#E3B341" stroke-width="1.4"/>
+      <text class="f late" x="660" y="409" text-anchor="middle">Pix tardio</text>
+    </g>
+    <text class="anim note f meta" x="540" y="432" text-anchor="middle">a v1 continua intacta</text>
+
+    <g class="moving">
+      <g class="anim lin run"><circle cx="60" cy="340" r="6" fill="#8B6CFF" filter="url(#s6f)" opacity=".75"/><circle cx="60" cy="340" r="4" fill="#EDEDF5"/></g>
+    </g>
+  </g>
 </svg>
